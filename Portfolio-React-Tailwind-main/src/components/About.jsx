@@ -1,7 +1,6 @@
 import React from "react";
 import AboutImage from "../assets/siya.jpeg";
 
-
 const About = () => {
   return (
     <div className="bg-black text-white py-20" id="about">
@@ -10,83 +9,64 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
           <img
             src={AboutImage}
-            alt=""
-            className="w-72 h-80 rounded object-cover mb-8 md:mb-0"
+            alt="Siya"
+            className="w-72 h-80 rounded-lg object-cover shadow-lg mb-8 md:mb-0 hover:scale-105 transition-transform duration-300"
           />
+
           <div className="flex-1">
-            <p className="text-lg mb-8">
-              I am a passionate full-stack developer with a focus on building
-              modern and responsive web applications. With a strong foundation
-              in both frontend and backend technologies, I strive to create
-              seamless and efficient user experiences.
+            <p className="text-lg mb-6 leading-relaxed text-gray-300">
+              👋 I'm <span className="font-semibold text-white">Siya Gajbhe</span>, a dedicated and detail-oriented full-stack developer with a passion for building elegant, performant, and user-focused applications.
+              I specialize in modern JavaScript frameworks like <span className="text-green-400">React.js</span> and <span className="text-green-400">Node.js</span>, and love transforming ideas into scalable digital experiences.
             </p>
+
+            <p className="text-md text-gray-400 mb-8">
+              My focus lies in crafting clean, responsive, and accessible UIs while maintaining performance and efficiency on the backend.
+              I enjoy solving real-world problems, collaborating in cross-functional teams, and continuously learning new technologies.
+            </p>
+
+            {/* Skill Progress Bars */}
             <div className="space-y-4">
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  HTML & CSS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-10/12"
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  React JS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-11/12"
-                  ></div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <label htmlFor="htmlandcss" className="w-2/12">
-                  Node JS
-                </label>
-                <div className="grow bg-gray-800 rounded-full h-2.5">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full 
-                    transform transition-transform duration-300 hover:scale-105 w-9/12"
-                  ></div>
-                </div>
-              </div>
+              <SkillBar label="HTML & CSS" width="90%" />
+              <SkillBar label="React JS" width="95%" />
+              <SkillBar label="Node JS" width="85%" />
+              <SkillBar label="MongoDB" width="80%" />
+              <SkillBar label="Tailwind CSS" width="90%" />
             </div>
-            {
-            /*
-            <div className="mt-12 flex justify-between text-center">
-                <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        3+
-                    </h3>
-                    <p>Years Experience</p>
-                </div>
-                <div>
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        50+
-                    </h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div>
-                  
-                    <h3 className="text-2xl font-bold text-transparent bg-clip-text 
-                bg-gradient-to-r from-green-400 to-blue-500">
-                        10+
-                    </h3>
-                    <p>Happy Clients</p>
-                </div> 
-            </div>
-            */}
+
+            {/* Experience Stats 
+            <div className="mt-12 flex flex-col sm:flex-row justify-between text-center gap-6 sm:gap-0">
+              <StatItem number="20+" label="Projects Completed" />
+              <StatItem number="6+" label="Mini Projects" />
+              <StatItem number="4+" label="Hackathons Participated" />
+            </div>*/}
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+// SkillBar Component
+const SkillBar = ({ label, width }) => (
+  <div className="flex items-center">
+    <label className="w-2/5 sm:w-1/4 text-gray-300">{label}</label>
+    <div className="grow bg-gray-800 rounded-full h-2.5">
+      <div
+        className="bg-gradient-to-r from-green-400 to-blue-500 h-2.5 rounded-full transition-all duration-500"
+        style={{ width }}
+      ></div>
+    </div>
+  </div>
+);
+
+// StatItem Component
+const StatItem = ({ number, label }) => (
+  <div>
+    <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+      {number}
+    </h3>
+    <p className="text-gray-400">{label}</p>
+  </div>
+);
 
 export default About;

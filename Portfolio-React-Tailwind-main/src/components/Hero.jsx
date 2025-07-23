@@ -32,7 +32,7 @@ const Hero = () => {
 
         {/* Resume Download */}
         <a
-          href="/Siya_Resume.pdf"
+          href="https://drive.google.com/file/d/1Eplynx-t3ozuzFecripK8tERxPKb_VuT/view?usp=drivesdk"
           download="Siya_Gajbhe_Resume.pdf"
           target="_blank"
           rel="noopener noreferrer"

@@ -12,6 +12,7 @@ const Footer = () => {
     <footer className="bg-black text-white py-6">
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex justify-center space-x-6 text-2xl mb-4">
+          {/*}
           <a
             href="mailto:gajbhesiya@gmail.com"
             target="_blank"
@@ -19,7 +20,7 @@ const Footer = () => {
             className="text-gray-400 hover:text-white"
           >
             <FaEnvelope />
-          </a>
+          </a>*/}
           <a
             href="https://www.linkedin.com/in/siya-gajbhe-7b3164252/"
             target="_blank"
@@ -37,7 +38,7 @@ const Footer = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.instagram.com/your_username"
+            href="https://www.instagram.com/siyagajbhe/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white"
@@ -45,7 +46,7 @@ const Footer = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://twitter.com/your_username"
+            href="https://x.com/siyagajbhe"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white"
